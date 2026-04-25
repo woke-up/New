@@ -1,8 +1,13 @@
 {
-  "builds": [
-    {
-      "src": "api",
-      "use": "nodejs"
-    }
-  ]
+  "root": "api",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "npm install"
+  },
+  "deploy": {
+    "startCommand": "node app.js",
+    "healthcheckPath": "/",
+    "restartPolicyType": "ON_FAILURE",
+    "numReplicas": 1
+  }
 }
