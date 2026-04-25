@@ -1,0 +1,22 @@
+.searchPage {
+  padding: 40px 60px;
+  min-height: calc(100vh - 100px);
+  background: linear-gradient(180deg, #e7f4ff 0%, #ffffff 100%);
+
+  .searchIntro {
+    max-width: 720px;
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 48px;
+      color: #0c2f65;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #4c6d94;
+    }
+  }
+}

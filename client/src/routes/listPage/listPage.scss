@@ -1,0 +1,89 @@
+@import "../../responsive.scss";
+
+.listPage {
+  background: linear-gradient(180deg, #e3f3ff 0%, #ffffff 100%);
+  min-height: 100vh;
+  padding: 40px 60px;
+
+  .listHeader {
+    margin-bottom: 30px;
+
+    h1 {
+      color: #0c2f66;
+      font-size: 44px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #4a628f;
+      font-size: 16px;
+      max-width: 650px;
+    }
+  }
+
+  .listContainer {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+    align-items: start;
+
+    @include md {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .filterPane {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+  }
+
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+
+    @include md {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .noResults {
+    grid-column: 1 / -1;
+    background-color: #ffffff;
+    border: 1px solid #dbe9ff;
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(31, 99, 191, 0.08);
+
+    h2 {
+      color: #0c2f65;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    p {
+      color: #5d7397;
+      font-size: 16px;
+    }
+  }
+
+  .mapContainer {
+    margin-top: 40px;
+    min-height: 420px;
+    border-radius: 24px;
+    background-color: #d9edff;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0, 91, 255, 0.08);
+
+    @include md {
+      display: none;
+    }
+  }
+}
